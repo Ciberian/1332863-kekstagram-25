@@ -84,7 +84,8 @@ scaleUpBtn.addEventListener('click', () => {
     const scaleValue = parseInt(scaleDisplay.value, 10) + SCALE_STEP;
     scaleDisplay.value = `${scaleValue}%`;
 
-    imgPreview.style.transform = `scale(${scaleValue / HUNDREDTH_PART})`;
+    // imgPreview.style.transform = `scale(${scaleValue / HUNDREDTH_PART})`;
+    imgPreview.setAttribute('style', `transform: scale(${scaleValue / HUNDREDTH_PART})`);
   }
 });
 
@@ -93,7 +94,8 @@ scaleDownBtn.addEventListener('click', () => {
     const scaleValue = parseInt(scaleDisplay.value, 10) - SCALE_STEP;
     scaleDisplay.value = `${scaleValue}%`;
 
-    imgPreview.style.transform = `scale(${scaleValue / HUNDREDTH_PART})`;
+    // imgPreview.style.transform = `scale(${scaleValue / HUNDREDTH_PART})`;
+    imgPreview.setAttribute('style', `transform: scale(${scaleValue / HUNDREDTH_PART})`);
   }
 });
 
